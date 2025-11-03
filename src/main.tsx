@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './style/index.css';
+import './style/estilo.css';
 import './components/style.css'
 import { BrowserRouter } from 'react-router-dom';
 

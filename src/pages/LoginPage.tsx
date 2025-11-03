@@ -1,7 +1,7 @@
 
 import React from 'react';
 import LoginForm from '../components/LoginForm';
-import '../style/index.css'; // Importa estilo global
+import '../style/estilo.css'; // Importa estilo global
 
 
 const LoginPage: React.FC = () => {

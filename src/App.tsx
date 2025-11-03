@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import Reports from "./pages/Reports/Reports";
 import AuditPage from "./components/Página-Geral/AuditPage";
 import SettingsPage from "./components/Configurações/SettingsPage";
-import "./style/index.css";
+import "./style/estilo.css";
 
 const App: React.FC = () => {
   return (
