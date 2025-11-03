@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import type { Funcionario } from "../Página-Geral/AuditPage";
+import type { Funcionario } from "../../components/Página-Geral/AuditPage";
 
 interface Props {
   onSelect: (f: Funcionario) => void;

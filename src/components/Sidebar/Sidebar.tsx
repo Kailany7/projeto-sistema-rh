@@ -1,17 +1,24 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import AjudaModal from "./AjudaModal";
 import SairModal from "./SairModal";
 
-const Sidebar: React.FC = () => {
+interface Props {
+  onAjudaClick?: () => void;
+}
+
+const Sidebar: React.FC<Props> = ({ onAjudaClick }) => {
   const [showAjuda, setShowAjuda] = useState(false);
   const [showSairModal, setShowSairModal] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path;
 
   const handleConfirmExit = () => {
     setShowSairModal(false);
-    navigate("/"); // 🔹 Volta para a tela de login
+    navigate("/"); // Volta para a tela de login
   };
 
   return (
@@ -30,19 +37,23 @@ const Sidebar: React.FC = () => {
           </div>
 
           <nav>
-            <Link to="#" className="nav-link">
+            <Link to="/colaboradores" className={`nav-link ${isActive('/colaboradores') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">groups</span>
               Colaboradores
             </Link>
-            <Link to="#" className="nav-link">
+            <Link to="/registro" className={`nav-link ${isActive('/registro') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">check_in_out</span>
               Registro de Ponto
             </Link>
-            <Link to="/relatorios" className="nav-link active">
+            <Link to="/auditoria" className={`nav-link ${isActive('/auditoria') ? 'active' : ''}`}>
+              <span className="material-symbols-outlined">history</span>
+              Auditoria de Ponto
+            </Link>
+            <Link to="/relatorios" className={`nav-link ${isActive('/relatorios') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">bar_chart</span>
               Relatórios de Ponto
             </Link>
-            <Link to="/configuracoes" className="nav-link">
+            <Link to="/configuracoes" className={`nav-link ${isActive('/configuracoes') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">tune</span>
               Configurações
             </Link>
@@ -50,14 +61,14 @@ const Sidebar: React.FC = () => {
         </div>
 
         <div className="sidebar-footer">
-          <button className="nav-link-ajuda" onClick={() => setShowAjuda(true)}>
+          <button className="nav-link-ajuda" onClick={() => {
+            setShowAjuda(true);
+            onAjudaClick?.();
+          }}>
             <span className="material-symbols-outlined">help</span>
             Ajuda
           </button>
-          <button
-            className="exit-button"
-            onClick={() => setShowSairModal(true)}
-          >
+          <button className="exit-button" onClick={() => setShowSairModal(true)}>
             <span className="material-symbols-outlined">logout</span>
             Sair
           </button>

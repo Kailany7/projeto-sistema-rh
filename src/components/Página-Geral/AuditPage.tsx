@@ -3,8 +3,8 @@ import PageLayout from "./PageLayout";
 import Sidebar from "../Sidebar/Sidebar";
 import Header from "./Header";
 import Filters from "./Filters";
-import InconsistenciesTable from "../Detlhas-Inconsistencia/InconsistenciesTable";
-import DetailsPanel from "../Detlhas-Inconsistencia/DetailsPanel";
+import InconsistenciesTable from "../../components/Detlhas-Inconsistencia/InconsistenciesTable";
+import DetailsPanel from "../../components/Detlhas-Inconsistencia/DetailsPanel";
 import AjudaModal from "../Sidebar/AjudaModal";
 
 export interface Funcionario {
