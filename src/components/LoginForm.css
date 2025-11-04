@@ -168,3 +168,11 @@ footer {
   height: 40px;
   z-index: 2;
 }
+
+.login-error {
+  color: #ff4d4f;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
