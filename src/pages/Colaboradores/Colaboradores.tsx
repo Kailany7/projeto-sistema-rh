@@ -6,7 +6,7 @@ import type { Colaborador } from "../../components/ColaboradoresTable/Colaborado
 import Pagination from "../../components/Pagination/Pagination";
 import Modal from "../../components/ModalColaborador/Modal";
 
-// ✅ Lista inicial de colaboradores (fora do componente)
+
 const colaboradoresIniciais: Colaborador[] = [
   { id: 1, nome: "Ana Silva", cargo: "Designer de Produto", departamento: "Tecnologia", status: "Ativo" },
   { id: 2, nome: "Bruno Costa", cargo: "Engenheiro de Software", departamento: "Tecnologia", status: "Ativo" },
@@ -16,7 +16,7 @@ const colaboradoresIniciais: Colaborador[] = [
 ];
 
 const Colaboradores: React.FC = () => {
-  // 🔹 Estados principais
+
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -62,7 +62,7 @@ const Colaboradores: React.FC = () => {
     setIsEditModalOpen(true);
   };
 
-  // 💾 Salvar edição
+
   const salvarEdicao = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!colaboradorEditando) return;

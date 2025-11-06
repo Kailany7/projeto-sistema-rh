@@ -1,0 +1,87 @@
+.filters-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Datas lado a lado */
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calendar-visual {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.date-range input[type='date'] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  height: 38px;
+}
+
+/* Campo de busca */
+.search-input {
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  min-width: 220px;
+  height: 38px;
+  flex-grow: 1;
+}
+
+/* Botões */
+.filter-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.filter-button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  border: none;
+  background-color: #1173d4;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.filter-button:hover {
+  background-color: #0e5fb5;
+}
+
+.filter-button.active {
+  background-color: #0d65c2;
+  box-shadow: 0 0 0 2px rgba(17, 115, 212, 0.25);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .filter-buttons {
+    justify-content: center;
+  }
+}

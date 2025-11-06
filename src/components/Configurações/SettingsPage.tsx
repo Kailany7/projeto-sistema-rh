@@ -24,14 +24,23 @@ const SettingsPage: React.FC = () => {
                   </p>
                 </div>
                 <label className="switch">
-                  <input type="checkbox" />
-                  <span className="slider" /> Ative para receber notificações
-                  sobre atualizações.
+                  <input
+                    type="checkbox"
+                    onChange={(e) => {
+                      if (e.target.checked) {
+                        alert("Notificações ativadas!");
+                      } else {
+                        alert("Notificações desativadas!");
+                      }
+                    }}
+                  />
+                  <span className="slider" /> Ative para receber notificações sobre atualizações.
                 </label>
               </div>
             </>
           }
         />
+
       </div>
     </PageLayout>
   );
