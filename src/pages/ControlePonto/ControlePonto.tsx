@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Sidebar from "../../components/Sidebar/Sidebar";
 import "./ControlePonto.css";
 
 import PageHeading from "../../components/PageHeading/PageHeading";
@@ -66,7 +67,6 @@ const ControlePonto: React.FC = () => {
     },
   ];
 
-  // Filtragem simples
   const registrosFiltrados = registros.filter((r) => {
     const matchSearch =
       r.nome.toLowerCase().includes(search.toLowerCase()) ||
@@ -76,31 +76,37 @@ const ControlePonto: React.FC = () => {
   });
 
   return (
-    <main className="controle-ponto">
-      <div className="grid grid-cols-3 gap-8">
-        {/* Coluna principal */}
-        <div className="col-span-3 lg:col-span-2 space-y-6">
-          <PageHeading
-            titulo="Registro de Ponto Diário"
-            descricao="Acompanhe a jornada de trabalho da sua equipe em tempo real."
-            onExport={() => console.log("Exportar relatório")}
-          />
+    <div className="controle-ponto-container">
+      {/* Sidebar fixa */}
+      <Sidebar />
 
-          <ToolbarChips
-            onSearch={(value) => setSearch(value)}
-            onFilterChange={(filter) => setFiltro(filter)}
-          />
+      {/* Conteúdo principal */}
+      <main className="controle-ponto">
+        <div className="grid grid-cols-3 gap-8">
+          {/* Coluna principal */}
+          <div className="col-span-3 lg:col-span-2 space-y-6">
+            <PageHeading
+              titulo="Registro de Ponto Diário"
+              descricao="Acompanhe a jornada de trabalho da sua equipe em tempo real."
+              onExport={() => console.log("Exportar relatório")}
+            />
 
-          <RegistroTable registros={registrosFiltrados} />
+            <ToolbarChips
+              onSearch={(value) => setSearch(value)}
+              onFilterChange={(filter) => setFiltro(filter)}
+            />
+
+            <RegistroTable registros={registrosFiltrados} />
+          </div>
+
+          {/* Coluna lateral */}
+          <aside className="col-span-3 lg:col-span-1 space-y-6">
+            <GoalsSection />
+            <RecognitionSection />
+          </aside>
         </div>
-
-        {/* Coluna lateral */}
-        <aside className="col-span-3 lg:col-span-1 space-y-6">
-          <GoalsSection />
-          <RecognitionSection />
-        </aside>
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };
 
