@@ -1,15 +1,14 @@
-/* 🔧 Corrige overflow geral */
+
 html,
 body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* impede scroll lateral */
+  overflow-x: hidden; 
   box-sizing: border-box;
 }
 
-/* 🧩 Estrutura principal (Sidebar + Conteúdo) */
 .page-layout {
   display: flex;
   width: 100%;
@@ -18,18 +17,17 @@ body {
   overflow-x: hidden;
 }
 
-/* 🔹 Conteúdo principal */
+
 .main-content {
   flex: 1;
   height: 100vh;
   padding: 2rem;
   background-color: #f6f7f8;
   overflow-y: auto;
-  overflow-x: hidden; /* evita scroll lateral interno */
+  overflow-x: hidden; 
   box-sizing: border-box;
 }
 
-/* 🔸 Card principal (bloco de gestão) */
 .gestao-card {
   width: 100%;
   min-height: calc(100vh - 4rem);
@@ -40,7 +38,7 @@ body {
   box-sizing: border-box;
 }
 
-/* 🧭 Cabeçalho da página */
+
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -62,13 +60,12 @@ body {
   margin: 0.25rem 0 0;
 }
 
-/* 🔵 Botão principal */
 .add-button {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #1a73e8; /* azul material design */
+  background-color: #1a73e8; 
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -78,7 +75,7 @@ body {
 }
 
 .add-button:hover {
-  background-color: #1557b0; /* hover mais escuro */
+  background-color: #1557b0; 
 }
 
 .add-button span {
@@ -86,7 +83,7 @@ body {
   align-items: center;
 }
 
-/* 🔍 Barra de pesquisa */
+
 .search-bar {
   position: relative;
   width: 100%;
@@ -120,12 +117,12 @@ body {
   color: #64748b;
 }
 
-/* 🎛️ Filtros */
+
 .filters {
   display: flex;
   gap: 0.75rem;
   margin-bottom: 1.5rem;
-  flex-wrap: wrap; /* evita quebra de layout em telas menores */
+  flex-wrap: wrap; 
 }
 
 .filter-button {
@@ -153,7 +150,6 @@ body {
   margin: 0;
 }
 
-/* 🪟 Modal (garantia de centralização e responsividade) */
 .modal {
   max-width: 600px;
   width: 90%;
@@ -188,7 +184,7 @@ body {
   box-shadow: 0 0 0 2px rgba(17, 115, 212, 0.3);
 }
 
-/* 📱 Responsividade */
+
 @media (max-width: 768px) {
   .page-header {
     flex-direction: column;

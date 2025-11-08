@@ -5,13 +5,12 @@ import "./LoginForm.css";
 const LoginForm: React.FC = () => {
     const navigate = useNavigate();
 
-    // apenas armazenamos os valores dos inputs (sem validação)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleSubmit = (event: React.FormEvent) => {
-        event.preventDefault(); // impede recarregar
-        navigate("/colaboradores", { replace: true }); // muda de página sem abrir nova aba
+        event.preventDefault();
+        navigate("/colaboradores", { replace: true }); 
     };
 
 

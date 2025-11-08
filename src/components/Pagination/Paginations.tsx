@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./Paginations.css";
 
 interface PaginationProps {
-  totalPages?: number; // ← Tornamos opcional
+  totalPages?: number; 
 }
 
-const Pagination: React.FC<PaginationProps> = ({ totalPages = 1 }) => { // ← Valor padrão
+const Pagination: React.FC<PaginationProps> = ({ totalPages = 1 }) => { 
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePrevious = () => {

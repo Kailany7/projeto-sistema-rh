@@ -84,7 +84,7 @@
 
 /* Botão Editar */
 .btn-editar {
-  background-color: #dbeafe; /* Azul suave */
+  background-color: #dbeafe; 
   color: #1d4ed8;
 }
 
@@ -94,7 +94,7 @@
 
 /* Botão Remover */
 .btn-remover {
-  background-color: #fee2e2; /* Vermelho suave */
+  background-color: #fee2e2; 
   color: #b91c1c;
 }
 

@@ -1,17 +1,16 @@
-/* Wrapper geral que alinha a sidebar e o conteúdo */
+
 .controle-ponto-container {
   display: flex;
   min-height: 100vh;
   background-color: #f6f7f8;
 }
 
-/* Sidebar já tem largura fixa — o conteúdo deve ocupar o restante */
 .sidebar {
   width: 260px;
   flex-shrink: 0;
 }
 
-/* Container principal da página */
+
 .controle-ponto {
   flex: 1;
   padding: 2rem;
@@ -19,7 +18,7 @@
   box-sizing: border-box;
 }
 
-/* Grid principal: 2 colunas em telas grandes */
+
 .controle-ponto .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -32,14 +31,14 @@
   }
 }
 
-/* Coluna principal (conteúdo central) */
+
 .controle-ponto .col-span-3.lg\:col-span-2 {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Coluna lateral (Goals + Recognition) */
+
 .controle-ponto aside {
   display: flex;
   flex-direction: column;
