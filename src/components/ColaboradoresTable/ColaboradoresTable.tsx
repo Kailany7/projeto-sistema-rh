@@ -1,6 +1,5 @@
 import React from "react";
 import "./ColaboradoresTable.css";
-
 export interface Colaborador {
   id: number;
   nome: string;
@@ -11,9 +10,15 @@ export interface Colaborador {
 
 interface Props {
   colaboradores: Colaborador[];
+  onEdit: (c: Colaborador) => void;
+  onDelete: (id: number) => void;
 }
 
-const ColaboradoresTable: React.FC<Props> = ({ colaboradores }) => {
+const ColaboradoresTable: React.FC<Props> = ({
+  colaboradores,
+  onEdit,
+  onDelete,
+}) => {
   return (
     <div className="table-container">
       <table className="table">
@@ -26,6 +31,7 @@ const ColaboradoresTable: React.FC<Props> = ({ colaboradores }) => {
             <th>Ações</th>
           </tr>
         </thead>
+
         <tbody>
           {colaboradores.map((colab) => (
             <tr key={colab.id}>
@@ -38,8 +44,15 @@ const ColaboradoresTable: React.FC<Props> = ({ colaboradores }) => {
                 </span>
               </td>
               <td>
-                <button className="action-button">
-                  <span className="material-symbols-outlined">more_vert</span>
+                <button onClick={() => onEdit(colab)} className="action-button">
+                  ✏️
+                </button>
+
+                <button
+                  onClick={() => onDelete(colab.id)}
+                  className="action-button delete"
+                >
+                  🗑️
                 </button>
               </td>
             </tr>
