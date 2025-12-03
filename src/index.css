@@ -1,4 +1,4 @@
-/* src/index.css */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ html, body {
   display: flex;
   flex-direction: column;
 }
-/* 🔧 Correção universal para inputs */
+
 input,
 select,
 textarea {
@@ -24,18 +24,18 @@ textarea {
   border: 1px solid #ccc !important;
 }
 
-/* Corrige cor do texto e placeholder nos inputs */
+
 input,
 select,
 textarea {
   background-color: #ffffff !important;
-  color: #1a1a1a !important; /* cor do texto */
+  color: #1a1a1a !important; 
   border: 1px solid #ccc;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #888 !important; /* cor do texto do placeholder */
+  color: #888 !important; 
 }
 
 input:focus,
@@ -43,5 +43,5 @@ select:focus,
 textarea:focus {
   outline: 2px solid var(--primary);
   background-color: #fff;
-  color: #000 !important; /* texto mais escuro em foco */
+  color: #000 !important; 
 }

@@ -41,23 +41,28 @@ const Sidebar: React.FC<Props> = ({ onAjudaClick }) => {
               <span className="material-symbols-outlined">groups</span>
               Colaboradores
             </Link>
-            <Link to="/registro" className={`nav-link ${isActive('/registro') ? 'active' : ''}`}>
+
+            <Link to="/controlePonto" className={`nav-link ${isActive('/controlePonto') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">check_in_out</span>
               Registro de Ponto
             </Link>
+
             <Link to="/auditoria" className={`nav-link ${isActive('/auditoria') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">history</span>
               Auditoria de Ponto
             </Link>
+
             <Link to="/relatorios" className={`nav-link ${isActive('/relatorios') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">bar_chart</span>
               Relatórios de Ponto
             </Link>
+
             <Link to="/configuracoes" className={`nav-link ${isActive('/configuracoes') ? 'active' : ''}`}>
               <span className="material-symbols-outlined">tune</span>
               Configurações
             </Link>
           </nav>
+
         </div>
 
         <div className="sidebar-footer">

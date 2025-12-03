@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import "./Colaboradores.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import ColaboradoresTable from "../../components/ColaboradoresTable/ColaboradoresTable";
 import Pagination from "../../components/Pagination/Pagination";
@@ -116,6 +117,27 @@ function Colaboradores() {
       carregarColaboradores();
     }
   }
+
+  const abrirEdicao = (colab: Colaborador) => {
+    setColaboradorEditando(colab);
+    setIsEditModalOpen(true);
+  };
+
+
+  const salvarEdicao = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!colaboradorEditando) return;
+
+    setColaboradores((prev) =>
+      prev.map((c) => (c.id === colaboradorEditando.id ? colaboradorEditando : c))
+    );
+    setIsEditModalOpen(false);
+  };
+
+
+  const removerColaborador = (id: number) => {
+    setColaboradores((prev) => prev.filter((c) => c.id !== id));
+  };
 
   return (
     <div style={{ display: "flex" }}>

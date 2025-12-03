@@ -14,12 +14,16 @@ interface Props {
   colaboradores: Colaborador[];
   onEdit: (c: Colaborador) => void;
   onDelete: (id: number) => void;
+  onAtualizar: (colaborador: Colaborador) => void;
+  onRemover: (id: number) => void;
 }
 
 const ColaboradoresTable: React.FC<Props> = ({
   colaboradores,
   onEdit,
   onDelete,
+  onAtualizar,
+  onRemover,
 }) => {
   return (
     <div className="table-container">
@@ -56,6 +60,20 @@ const ColaboradoresTable: React.FC<Props> = ({
                 >
                   excluir 
                 </button>
+                <div className="action-buttons">
+                  <button
+                    className="btn-editar"
+                    onClick={() => onAtualizar(colab)}
+                  >
+                    Editar
+                  </button>
+                  <button
+                    className="btn-remover"
+                    onClick={() => onRemover(colab.id)}
+                  >
+                    Remover
+                  </button>
+                </div>
               </td>
             </tr>
           ))}

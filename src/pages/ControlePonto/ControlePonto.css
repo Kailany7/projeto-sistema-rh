@@ -1,33 +1,44 @@
-/* Container principal da página */
+
+.controle-ponto-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f6f7f8;
+}
+
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+
 .controle-ponto {
   flex: 1;
   padding: 2rem;
   background-color: #f6f7f8;
-  min-height: 100vh;
   box-sizing: border-box;
 }
 
-/* Grid principal: 2 colunas em telas grandes */
+
 .controle-ponto .grid {
   display: grid;
-  grid-template-columns: 1fr; /* padrão: 1 coluna */
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 
 @media (min-width: 1024px) {
   .controle-ponto .grid {
-    grid-template-columns: 2fr 1fr; /* 2/3 + 1/3 */
+    grid-template-columns: 2fr 1fr;
   }
 }
 
-/* Coluna principal (conteúdo central) */
+
 .controle-ponto .col-span-3.lg\:col-span-2 {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-/* Coluna lateral (Goals + Recognition) */
+
 .controle-ponto aside {
   display: flex;
   flex-direction: column;
@@ -35,8 +46,4 @@
   position: relative;
 }
 
-/* Cards laterais fixos ao rolar */
-.controle-ponto aside > div {
-  position: sticky;
-  top: 2rem;
-}
+
