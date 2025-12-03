@@ -47,14 +47,14 @@ const ColaboradoresTable: React.FC<Props> = ({
               </td>
               <td>
                 <button onClick={() => onEdit(colab)} className="action-button">
-                  ✏️
+                  editar
                 </button>
 
                 <button
                   onClick={() => onDelete(colab.id)}
                   className="action-button delete"
                 >
-                  🗑️
+                  excluir 
                 </button>
               </td>
             </tr>
