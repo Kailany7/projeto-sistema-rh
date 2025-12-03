@@ -1,4 +1,4 @@
-.login-page {
+.register-page {
   font-family: 'Inter', sans-serif;
   background-color: #f5f6f8;
   min-height: 100vh;
@@ -7,8 +7,8 @@
   justify-content: center;
 }
 
-
-.login-container {
+/* Mantém exatamente o mesmo layout */
+.register-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100vw;
@@ -17,89 +17,64 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.05);
 }
 
-
-.login-form-section {
+/* Mesmas configurações do Login */
+.register-form-section {
   padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-
-.login-header {
+/* Cabeçalho igual */
+.register-header {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 24px;
 }
 
-
-.login-header h1 {
+.register-header h1 {
   font-size: 20px;
   font-weight: bold;
   color: #2c2c2c;
 }
 
-
-.login-title h2 {
+/* Títulos */
+.register-title h2 {
   font-size: 32px;
   font-weight: 900;
   margin-bottom: 8px;
   color: #2c2c2c;
 }
 
-
-.login-title p {
+.register-title p {
   font-size: 16px;
   color: #666;
   margin-bottom: 32px;
 }
 
-
-.login-form label {
+/* Inputs */
+.register-form label {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-
-.login-form span {
+.register-form span {
   font-weight: 500;
   margin-bottom: 8px;
   color: #333;
 }
 
-
-.login-form input {
+.register-form input {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
 }
 
-
-.password-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-
-.password-wrapper input {
-  width: 100%;
-  padding: 12px 45px 12px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  transition: border-color 0.3s ease;
-}
-
-
-.eye-icon:hover {
-  color: #555;
-}
-
-
-.login-form button {
+/* Botão igual ao login */
+.register-form button {
   background-color: #7075ff;
   color: #fff;
   font-weight: 600;
@@ -115,71 +90,38 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-
-
-.login-form button:hover {
-  background-color: #5d63ff; /* cor ao passar o mouse */
+.register-form button:hover {
+  background-color: #5d63ff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(93, 99, 255, 0.3);
 }
 
-
-.login-form button:active {
+.register-form button:active {
   transform: translateY(0);
   box-shadow: none;
 }
-footer {
-  margin-top: 40px;
-  font-size: 14px;
-  color: #888;
-  text-align: center;
-}
 
-
-.login-background {
-  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_UsmqRM9Zuq9Pp-mZfFq4lnKt0S7R9D3vR6bzOww5YoOkKOQ_P5so8DhWf2x2OdsAhJQC_s-AGjhxiAWJSvEIX-jwpdvM_GOxuOHZKs85sM9AgqqD6sIU5HppvSurWU4tn8s8dmTKotvfrBSIDC9QCtvLbCtgK6XyXd2QhY0h7cHompPfxzjYAuGYOXXhRd4c5aGhUg0dRymTvVCHyK1V8i4ngFHyyxgB_0cWeUbUq5uBdwESn5kmZ1TnTp4VnTCbYtNcluYmUZI');
-  background-size: cover;
-  background-position: center;
-}
-
-
-.login-container {
-  position: relative;
-  z-index: 0;
-}
-
-
-
-.login-form-section {
-  position: relative;
-  z-index: 1;
-}
-
-
-.login-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-
-.login-logo {
-  height: 40px;
-  z-index: 2;
-}
-
-.login-error {
+/* Mensagem de erro */
+.register-error {
   color: #ff4d4f;
   margin-top: 10px;
   text-align: center;
   font-size: 0.9rem;
 }
 
-.forgot-password {
-  cursor: pointer;
+/* Fundo */
+.register-background {
+  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_UsmqRM9Zuq9Pp-mZfFq4lnKt0S7R9D3vR6bzOww5YoOkKOQ_P5so8DhWf2x2OdsAhJQC_s-AGjhxiAWJSvEIX-jwpdvM_GOxuOHZKs85sM9AgqqD6sIU5HppvSurWU4tn8s8dmTKotvfrBSIDC9QCtvLbCtgK6XyXd2QhY0h7cHompPfxzjYAuGYOXXhRd4c5aGhUg0dRymTvVCHyK1V8i4ngFHyyxgB_0cWeUbUq5uBdwESn5kmZ1TnTp4VnTCbYtNcluYmUZI');
+  background-size: cover;
+  background-position: center;
 }
-.create-account {
-  cursor: pointer !important;
-  text-decoration: underline;
+
+.register-container {
+  position: relative;
+  z-index: 0;
+}
+
+.register-form-section {
+  position: relative;
+  z-index: 1;
 }
