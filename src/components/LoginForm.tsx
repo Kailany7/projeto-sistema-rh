@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
+import logo from "../assets/rh_logo.png";
+
 
 const LoginForm: React.FC = () => {
     const navigate = useNavigate();
@@ -21,7 +23,7 @@ const LoginForm: React.FC = () => {
                 },
                 body: JSON.stringify({
                     email,
-                    senha: password  // BACKEND ESPERA "senha"
+                    senha: password
                 })
             });
 
@@ -33,10 +35,8 @@ const LoginForm: React.FC = () => {
                 return;
             }
 
-            // Salva token no navegador
             localStorage.setItem("token", data.token);
 
-            // Redireciona após login
             navigate("/colaboradores", { replace: true });
 
         } catch (error) {
@@ -49,6 +49,7 @@ const LoginForm: React.FC = () => {
 
     return (
         <div className="login-container">
+
             <div className="login-form-section">
                 <div className="login-header">
                     <svg
@@ -115,14 +116,19 @@ const LoginForm: React.FC = () => {
                     >
                         Criar conta
                     </a>
-
-
                 </form>
 
                 <footer>© 2024 Nome da Empresa. Todos os direitos reservados.</footer>
             </div>
 
-            <div className="login-background" />
+            <div className="login-background">
+                <img
+                    src={logo}
+                    alt="Logo"
+                    className="logo-azul"
+                />
+
+            </div>
         </div>
     );
 };
