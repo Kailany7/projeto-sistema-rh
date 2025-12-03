@@ -91,9 +91,16 @@ const RegisterForm: React.FC = () => {
                     </button>
                 </form>
 
-                <a className="forgot-password" onClick={() => navigate("/login")}>
+                <button
+                    type="button"
+                    className="forgot-password"
+                    onClick={() => navigate("/")}
+                    style={{ background: "none", border: "none", color: "#007bff", cursor: "pointer" }}
+                >
                     Já tem conta? Entre aqui
-                </a>
+                </button>
+
+
             </div>
 
             <div className="login-background" />
